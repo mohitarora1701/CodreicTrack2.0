@@ -1,4 +1,38 @@
-<html>
-<body>testing index page
-  <include file="templates/Login.html"></body>
+﻿{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{% static "css/Login.css" %}">
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+    <title>Coderic Track</title>
+</head>
+<body>
+    <div class="login-box">
+        <h1>Coderic Track</h1>
+        <h2>Login</h2>
+        <form  method="post" action="">
+            {% csrf_token %}
+            <div class="user-box">
+                <input type="text" name="U" required>
+                <label>Unique ID</label>
+            </div>
+            <div class="user-box">
+                <input type="password" name="Passw" required>
+                <label>Password</label>
+            </div>
+
+            <button name="submit1" href="" type="submit">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Login
+            </button>
+
+        </form>
+    </div>
+</body>
 </html>
