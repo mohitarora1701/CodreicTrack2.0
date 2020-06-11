@@ -1,0 +1,82 @@
+﻿{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{% static "css/Work.css" %}">
+    <!-- <link rel="stylesheet" type="text/css" href="Work.css"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+
+    <title>Coderic Track/Submission</title>
+</head>
+<body>
+
+	<div class="navbar flex-box">
+    <form class="navbar flex-box" action="" method="post">
+      {% csrf_token %}
+      <a>Coderic Track</a>
+      <div class="bt1">
+          <button name="submission">Submission</button>
+      </div>
+      <div class="bt2">
+           <button name="history">History</button>
+      </div>
+      <div class="texte">
+          <input type="text" name="unique" value="Hello,{{displayname}}" size="30"/ readonly>
+      </div>
+      <div class="logout">
+          <button name="logout">Log out</button>
+      </div>
+    </form>
+
+	</div>
+
+	<div id="main">
+	    <div class="submit-box">
+	        <h2>Work Status</h2>
+	        <form method="post" action="">
+	            {% csrf_token %}
+              <div class="user-box">
+	                <input type="hidden" value="{{data}}" name="unique">
+	            </div>
+              <div class="user-box">
+	                <input type="date" name="dates" required>
+	                <!-- <label></label> -->
+	            </div>
+	            <div class="user-box">
+	                <input type="time" name="from" required>
+	                <label>Work Hours ( From ) ( 12 Hours )</label>
+	            </div>
+	            <div class="user-box">
+	                <input type="text" name="leader" required>
+	                <label>Team Leader</label>
+	            </div>
+	            <div class="user-box">
+	                <input type="text" name="mentor" required>
+	                <label>Mentor Name</label>
+	            </div>
+	            <div class="user-box">
+	                <input type="text" name="member" required>
+	                <label>Employee Member Name</label>
+	            </div>
+	            <div class="user-box">
+	                <input type="text" name="description" required>
+	                <label>Work Description</label>
+	            </div>
+	            <div class="user-box">
+	                <input type="time" name="to" required>
+	                <label>Work Hours ( To ) ( 12 Hours )</label>
+	            </div>
+	            <button name="submit2" href="" type="submit">
+	                <span></span>
+	                <span></span>
+	                <span></span>
+	                <span></span>
+	                submit
+	            </button>
+	        </form>
+	    </div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,373 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: linear-gradient(#141e30, #243b55);
+}
+
+.flex-box{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+ }
+
+.navbar {
+  position: sticky;
+  overflow: hidden;
+  background-color: #151d30;
+  box-shadow: 0 10px 6px -5px rgb(0,0,0,.5);
+  top: 0;
+  width: 100%;
+  height: 10%;
+  /*text-align: center;*/
+  z-index: 999;
+}
+
+.navbar .bt1 button {
+  position: relative;
+  display: inline-block;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 20px;
+  background: transparent;
+  /*text-align: center;*/
+  /*margin-left: 2%;
+  margin-right: 5%;
+  right:  18%;*/
+  letter-spacing: 5px;
+  /*transform: translateY(6px);*/
+  font-family: 'Quicksand', sans-serif;
+  /*border-right: 0;
+  border-left: 1%;
+  border-top:  0;
+  border-bottom: 1%;
+  border-bottom-left-radius: 20px;
+  border-color: #03e9f4;*/
+  border: 0;
+}
+.navbar .bt2 button {
+  position: relative;
+  display: inline-block;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 20px;
+  background: transparent;
+  /*text-align: center;*/
+  /*margin-left: 5%;
+  margin-right: 2%;
+  right:  1%;*/
+  letter-spacing: 5px;
+  /*transform: translateY(-36px);*/
+  font-family: 'Quicksand', sans-serif;
+  /*border-right: 1%;
+  border-bottom-right-radius: 20px;
+  border-left: 0;
+  border-top:  0;
+  border-bottom: 1%;
+  border-color: #03e9f4;*/
+  border: 0;
+}
+
+.navbar a{
+  display: inline-block;
+  color: white;
+  padding: 10px 30px;
+  text-decoration: none;
+  font-size: 35px;
+  background: transparent;
+  float: left;
+  font-family: 'Satisfy', cursive;
+}
+
+.navbar .logout button{
+  display: inline-block;
+  color: white;
+  padding: 10px 17px;
+  text-decoration: none;
+  text-transform: uppercase;
+  /*text-align: center;*/
+  font-size: 20px;
+  border: 0;
+  background: transparent;
+  letter-spacing: 3px;
+  /*transform: translateY(-110px);*/
+  /*margin-left:  85%;*/
+}
+
+.navbar .texte input{
+  display: inline-block;
+  color: white;
+  padding: 10px 5px;
+  text-decoration: none;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-size: 14px;
+  /*transform: translateY(-75px);*/
+  /*margin-left:  60%;*/
+  font-family: 'Quicksand', sans-serif;
+  background-color: transparent;
+  border: 0;
+}
+
+.navbar button:hover {
+    background: #03e9f4;
+    color: rgba(0,0,0,.5);
+    box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 25px #03e9f4, 0 0 100px #03e9f4;
+    transition: .5s;
+    border-radius: 20px;
+    border-color: transparent;
+
+}
+
+.navbar .logout button:hover {
+    background: #ff3333;
+    color: rgba(0,0,0,.5);
+    box-shadow: 0 0 5px  #ff3333, 0 0 25px #ff3333, 0 0 25px #ff3333, 0 0 100px #ff3333;
+    transition: .5s;
+    border-radius: 20px;
+
+}
+
+#main{
+    /*width: 500px;
+    height: 1%;*/
+    padding: 20vh 0 20vh 0;
+    /*width: 100%;
+    height: 100%;*/
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.submit-box {
+    width: 500px;
+    padding: 35px;
+    margin-bottom: 3rem;
+    background: rgba(0,0,0,.5);
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+    .submit-box textarea{
+      font-family: 'Quicksand', sans-serif;
+      letter-spacing: 2px;
+    }
+    .submit-box h2 {
+        font-family: 'Quicksand', sans-serif;
+        letter-spacing: 3px;
+        margin: 0 0 5px;
+        padding-bottom:  10%;
+        color: #fff;
+        text-align: center;
+    }
+
+    .submit-box h1 {
+        font-family: 'Satisfy', cursive;
+        font-size: 40px;
+        margin: 0 0 20px;
+        padding: 0;
+        color: #fff;
+        text-align: center;
+    }
+
+    .submit-box .user-box {
+        position: relative;
+    }
+
+        .submit-box .user-box input {
+            font-family: 'Quicksand', sans-serif;
+            width: 100%;
+            padding: 10px 0;
+            font-size: 16px;
+            color: #fff;
+            margin-bottom: 30px;
+            border: none;
+            border-bottom: 1px solid #fff;
+            outline: none;
+            background: transparent;
+        }
+
+        .submit-box .user-box label {
+            font-family: 'Quicksand', sans-serif;
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 10px 0;
+            font-size: 16px;
+            color: #fff;
+            pointer-events: none;
+            transition: .5s;
+        }
+
+        .submit-box .user-box input:focus ~ label,
+        .submit-box .user-box input:valid ~ label {
+            top: -20px;
+            left: 0;
+            color: #03e9f4;
+            font-size: 12px;
+        }
+
+    .submit-box form button {
+        position: relative;
+        display: inline-block;
+        background-color: transparent;
+        padding: 10px 20px;
+        color: #03e9f4;
+        font-size: 16px;
+        text-decoration: none;
+        text-transform: uppercase;
+        overflow: hidden;
+        transition: .5s;
+        margin-top: 40px;
+        letter-spacing: 4px;
+        border: 0px;
+    }
+
+    .submit-box button:hover {
+        background: #03e9f4;
+        color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 100px #03e9f4;
+    }
+
+    .submit-box button span {
+        position: absolute;
+        display: block;
+    }
+
+        .submit-box button span:nth-child(1) {
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #03e9f4);
+            animation: btn-anim1 1s linear infinite;
+        }
+
+@keyframes btn-anim1 {
+    0% {
+        left: -100%;
+    }
+
+    50%,100% {
+        left: 100%;
+    }
+}
+
+.submit-box button span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #03e9f4);
+    animation: btn-anim2 1s linear infinite;
+    animation-delay: .25s
+}
+
+@keyframes btn-anim2 {
+    0% {
+        top: -100%;
+    }
+
+    50%,100% {
+        top: 100%;
+    }
+}
+
+.submit-box button span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #03e9f4);
+    animation: btn-anim3 1s linear infinite;
+    animation-delay: .5s
+}
+
+@keyframes btn-anim3 {
+    0% {
+        right: -100%;
+    }
+
+    50%,100% {
+        right: 100%;
+    }
+}
+
+.submit-box button span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #03e9f4);
+    animation: btn-anim4 1s linear infinite;
+    animation-delay: .75s
+}
+
+@keyframes btn-anim4 {
+    0% {
+        bottom: -100%;
+    }
+
+    50%,100% {
+        bottom: 100%;
+    }
+}
+
+
+.submit-box .history{
+  position: relative;
+}
+
+.submit-box .history label{
+    height: 50px;
+    text-align: left;
+    clear: both;
+    font-family: 'Quicksand', sans-serif;
+    display: block;
+    font-size: 16px;
+    color: #fff;
+    transition: .5s;
+}
+
+.submit-box .history textarea {
+    float: right;
+    width: 300px;
+    height: 60px;
+    resize: none;
+    margin-top: 10px;
+    font-family: 'Quicksand', sans-serif;
+    padding: 0px 10px;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: -55px;
+    border: none;
+    /*border-bottom: 1px solid #fff;*/
+    outline: none;
+    background: transparent;
+}
+
+.submit-box .history textarea:focus ~ label,
+  .submit-box .history textarea:valid ~ label {
+    top: -20px;
+    left: 0;
+    color: #03e9f4;
+    font-size: 12px;
+}
+
+
+.submit-box .history input:focus ~ label,
+  .submit-box .history input:valid ~ label {
+    top: -20px;
+    left: 0;
+    color: #03e9f4;
+    font-size: 12px;
+}
