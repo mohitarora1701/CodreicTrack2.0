@@ -1,0 +1,79 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{% static "css/History.css" %}">
+    <!-- <link rel="stylesheet" type="text/css" href="History.css"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+
+    <title>Coderic Track/History</title>
+</head>
+<body>
+
+	<div class="navbar flex-box">
+    <form class="navbar flex-box" action="" method="post">
+        {% csrf_token %}
+				<a>Coderic Track</a>
+        <div class="bt1">
+          <button name="submission">Submission</button>
+        </div>
+        <div class="bt2">
+  			<button name="history">History</button>
+        </div>
+        <div class="texte">
+          <input type="text" name="" value="Hello,{{displayname}}" size="30" readonly/>
+        </div>
+        <div class="logout">
+          <button name="logout">Log out</button>
+        </div>
+  </form>
+	</div>
+
+	<div id="main">
+    {% for i in whole_data %}
+	    <div class="submit-box">
+	        <h2>View history</h2>
+	        <form method="post" id="date" action="">
+	            {% csrf_token %}
+	            <div class="history">
+	                <textarea readonly id="name">{{i.work_date}}</textarea>
+	                <label>Date :</label>
+	            </div>
+	            <div class="history">
+	            	<textarea readonly id="name">{{displayname}}</textarea>
+	                <!--<input type="text" name="name" required-->
+	                <label for="name">Name :</label>
+	            </div>
+	            <div class="history">
+	                <!--<input type="text" name="leader" required>-->
+	                <textarea readonly id="leader">{{i.Team_Leader}}</textarea>
+	                <label for="leader">Leader :</label>
+	            </div>
+	            <div class="history">
+	                <!--<input type="text" name="mentor" required>-->
+	                <textarea readonly id="mentor">{{i.Mentor}}</textarea>
+	                <label for="mentor">Mentor :</label>
+	            </div>
+	            <div class="history">
+	                <!--<input type="text" name="from" value="{{i.work_from}}" >-->
+	                <textarea readonly id="his">{{i.work_from}}</textarea>
+	                <label>Work(from) :</label>
+	            </div>
+	            <div class="history">
+	            	<!-- <input type="text" name="to" value="{{i.work_to}}" -->
+	                <textarea readonly id="his">{{i.work_to}}</textarea>
+	                <label for="his">Work(to) :</label>
+	            </div>
+	            <div class="history">
+	                <!--<input type="text" name="discription" required>-->
+	                <textarea readonly id="desc">{{i.Work_Description}}</textarea>
+	                <label for="desc">Description :</label>
+	            </div>
+	        </form>
+	    </div>
+      {% endfor %}
+	</div>
+</body>
+</html>
